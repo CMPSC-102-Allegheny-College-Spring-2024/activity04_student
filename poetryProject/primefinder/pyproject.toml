@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "primefinder"
+version = "0.1.0"
+description = ""
+authors = ["Oliver Bonham-Carter <obonhamcarter@allegheny.edu>"]
+readme = "README.md"
+
+[tool.poetry.scripts]
+ primefinder = "primefinder.main:cli"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+rich = "^13.7.0"
+typer = "^0.9.0"
+black = "^24.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

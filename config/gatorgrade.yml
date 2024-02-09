@@ -1,0 +1,24 @@
+# perform checks on a file
+- poetryProject/primefinder/primefinder/main.py:
+    - description: Ensure that the poetryProject/primefinder/primefinder/main.py file exists in the source/ directory
+      check: ConfirmFileExists
+    - description: Complete all TODOs, remove the TODO markers in the poetryProject/primefinder/primefinder/main.py
+      check: MatchFileFragment
+      options:
+        fragment: TODO
+        count: 0
+        exact: true
+    - description: Delete the 'Add Your Name Here' prompt in the source code file
+      check: MatchFileFragment
+      options:
+        fragment: "Add Your Name Here"
+        count: 0
+        exact: true
+
+
+
+# count number of commits in the GitHub repository
+- description: Have at least a specific minimum of commits in repository
+  check: CountCommits
+  options:
+    count: 3
